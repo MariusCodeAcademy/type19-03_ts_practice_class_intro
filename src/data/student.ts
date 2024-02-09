@@ -12,7 +12,7 @@ interface ModIf {
 }
 type Marks = number[];
 
-const student: StudIf = {
+export const student: StudIf = {
   name: 'Serbentautas',
   surname: 'Bordiuras',
   faculty: 'Informatikos fakultetas',

@@ -1,5 +1,6 @@
-"use strict";
+import { student } from './data/student.js';
 console.log('hello ts');
+console.log('student ===', student);
 function sayHi() {
     console.log('Hello from sayHi fn');
 }

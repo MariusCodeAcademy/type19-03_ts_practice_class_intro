@@ -1,5 +1,4 @@
-"use strict";
-const student = {
+export const student = {
     name: 'Serbentautas',
     surname: 'Bordiuras',
     faculty: 'Informatikos fakultetas',

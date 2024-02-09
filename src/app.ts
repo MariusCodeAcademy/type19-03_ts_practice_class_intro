@@ -1,5 +1,7 @@
-console.log('hello ts');
+import { student } from './data/student.js';
 
+console.log('hello ts');
+console.log('student ===', student);
 function sayHi(): void {
   console.log('Hello from sayHi fn');
 }
@@ -32,3 +34,9 @@ function goUp(): void {
   if (countePEl === null) return;
   countePEl.textContent = countVal.toString();
 }
+
+// 1. sukurti funkcija, kuri argumentu ima studento moduli
+// grazina ir atspausdina jo pazimiu vidurki
+
+// 2.sukurti funkcija, kuri argumentu ima studento moduli
+// grazina objekta kuriame yra title ir avg. avg yra vidurkis, padaugintas is creditu
