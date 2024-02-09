@@ -28,4 +28,5 @@ function deleteFromCart(arr, idToDelete) {
 }
 const id = cartArr[2].id;
 deleteFromCart(cartArr, id);
+function updateTitle(arr, id, newTitle) { }
 //# sourceMappingURL=cart.js.map

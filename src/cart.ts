@@ -60,3 +60,5 @@ function deleteFromCart(arr: CartItemIf[], idToDelete: number): void {
 const id = cartArr[2].id;
 
 deleteFromCart(cartArr, id);
+
+function updateTitle(arr, id, newTitle) {}
