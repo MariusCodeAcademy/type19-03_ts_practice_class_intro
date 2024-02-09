@@ -35,4 +35,11 @@ function getModuleInfo(modulObj) {
 }
 const rezObj = getModuleInfo(student.modules[2]);
 console.log('rezObj ===', rezObj);
+function getTotalStudAvg(stud) {
+    const avgArr = stud.modules.map(getModuleAvg);
+    console.log('avgArr ===', avgArr);
+    return avgArr.reduce((total, avg) => total + avg, 0) / avgArr.length;
+}
+const totalAvg = getTotalStudAvg(student);
+console.log('totalAvg ===', totalAvg);
 //# sourceMappingURL=app.js.map

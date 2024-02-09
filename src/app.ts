@@ -1,4 +1,4 @@
-import { ModIf, student } from './data/student.js';
+import { ModIf, StudIf, student } from './data/student.js';
 
 console.log('hello ts');
 console.log('student ===', student);
@@ -60,6 +60,15 @@ const rezObj = getModuleInfo(student.modules[2]);
 console.log('rezObj ===', rezObj);
 
 // 3. parasyti funkcija, kuri ima studenta argumentu ir grazina jo visu moduliu vidurki
+
+function getTotalStudAvg(stud: StudIf): number {
+  // const avgArr: number[] = [];
+  const avgArr: Array<number> = stud.modules.map(getModuleAvg);
+  console.log('avgArr ===', avgArr);
+  return avgArr.reduce((total, avg) => total + avg, 0) / avgArr.length;
+}
+const totalAvg = getTotalStudAvg(student);
+console.log('totalAvg ===', totalAvg);
 
 // 4. parasyti funkcija, kuri ima studenta argumentu ir grazina visus jo modulius kaip stringus masyve.
 
