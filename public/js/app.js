@@ -10,6 +10,8 @@ const countePEl = document.getElementById('counter-val');
 console.log('btn1El ===', btn1El);
 btn1El === null || btn1El === void 0 ? void 0 : btn1El.addEventListener('click', (event) => {
     console.log('event.target ===', event.target);
+    const btn = event.target;
+    console.log('btn.textContent ===', btn.textContent);
     sayHi();
 });
 btn2El === null || btn2El === void 0 ? void 0 : btn2El.addEventListener('click', goUp);

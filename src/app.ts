@@ -18,7 +18,8 @@ console.log('btn1El ===', btn1El);
 
 btn1El?.addEventListener('click', (event: Event): void => {
   console.log('event.target ===', event.target);
-  // event.target.textContent
+  const btn = event.target as HTMLButtonElement;
+  console.log('btn.textContent ===', btn.textContent);
   sayHi();
 });
 
