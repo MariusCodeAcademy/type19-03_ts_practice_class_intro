@@ -1,8 +1,18 @@
-interface StudIf {}
-interface ModIf {}
+interface StudIf {
+  name: string;
+  surname: string;
+  faculty: string;
+  course: number;
+  modules: ModIf[];
+}
+interface ModIf {
+  title: string;
+  credits: number;
+  marks: Marks;
+}
 type Marks = number[];
 
-const student = {
+const student: StudIf = {
   name: 'Serbentautas',
   surname: 'Bordiuras',
   faculty: 'Informatikos fakultetas',

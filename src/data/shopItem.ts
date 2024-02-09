@@ -1,6 +1,19 @@
-interface ShopItem {}
+interface ShopItem {
+  id: number;
+  qty: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: RatingIf;
+}
+interface RatingIf {
+  rate: number;
+  count: number;
+}
 
-const shopItem = {
+const shopItem: ShopItem = {
   id: 1,
   qty: 15,
   title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
