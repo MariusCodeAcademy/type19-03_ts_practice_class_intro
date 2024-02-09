@@ -1,11 +1,11 @@
-interface StudIf {
+export interface StudIf {
   name: string;
   surname: string;
   faculty: string;
   course: number;
   modules: ModIf[];
 }
-interface ModIf {
+export interface ModIf {
   title: string;
   credits: number;
   marks: Marks;

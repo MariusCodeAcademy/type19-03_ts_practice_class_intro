@@ -1,4 +1,4 @@
-import { student } from './data/student.js';
+import { ModIf, student } from './data/student.js';
 
 console.log('hello ts');
 console.log('student ===', student);
@@ -37,6 +37,33 @@ function goUp(): void {
 
 // 1. sukurti funkcija, kuri argumentu ima studento moduli
 // grazina ir atspausdina jo pazimiu vidurki
+function getModuleAvg(modulObj: ModIf): number {
+  console.log('modulObj ===', modulObj);
+  const avg: number = modulObj.marks.reduce(
+    (total, mark, _idx, arr) => total + mark / arr.length,
+    0,
+  );
+  console.log('avg ===', avg);
+  return avg;
+}
+// getModuleAvg(student.modules[1]);
 
 // 2.sukurti funkcija, kuri argumentu ima studento moduli
+function getModuleInfo(modulObj: ModIf): { avg: number; title: string } {
+  console.log('modulObj ===', modulObj);
+  const avgCalc: number = getModuleAvg(modulObj);
+
+  return { avg: avgCalc * modulObj.credits, title: modulObj.title };
+}
 // grazina objekta kuriame yra title ir avg. avg yra vidurkis, padaugintas is creditu
+const rezObj = getModuleInfo(student.modules[2]);
+console.log('rezObj ===', rezObj);
+
+// 3. parasyti funkcija, kuri ima studenta argumentu ir grazina jo visu moduliu vidurki
+
+// 4. parasyti funkcija, kuri ima studenta argumentu ir grazina visus jo modulius kaip stringus masyve.
+
+// 5. parasyti funkcija, kuri ima studenta argumentu ir grazina masyva su { avg: number; title: string } objektais viduje
+
+// 6. parasyti funkcija, kuri ima studenta argumentu ir grazina objekta
+// { studFullName: '', totalAvg: 8.5 }

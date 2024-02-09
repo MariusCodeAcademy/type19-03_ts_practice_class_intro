@@ -22,4 +22,17 @@ function goUp() {
         return;
     countePEl.textContent = countVal.toString();
 }
+function getModuleAvg(modulObj) {
+    console.log('modulObj ===', modulObj);
+    const avg = modulObj.marks.reduce((total, mark, _idx, arr) => total + mark / arr.length, 0);
+    console.log('avg ===', avg);
+    return avg;
+}
+function getModuleInfo(modulObj) {
+    console.log('modulObj ===', modulObj);
+    const avgCalc = getModuleAvg(modulObj);
+    return { avg: avgCalc * modulObj.credits, title: modulObj.title };
+}
+const rezObj = getModuleInfo(student.modules[2]);
+console.log('rezObj ===', rezObj);
 //# sourceMappingURL=app.js.map
