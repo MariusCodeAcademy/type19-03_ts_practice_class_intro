@@ -1,6 +1,6 @@
 interface StudIf {}
 interface ModIf {}
-type Mark = number[];
+type Marks = number[];
 
 const student = {
   name: 'Serbentautas',
