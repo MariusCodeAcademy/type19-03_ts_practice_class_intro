@@ -1,3 +1,7 @@
+interface StudIf {}
+interface ModIf {}
+type Mark = number[];
+
 const student = {
   name: 'Serbentautas',
   surname: 'Bordiuras',
