@@ -1,17 +1,17 @@
 "use strict";
 class CartItem {
     constructor(title, qty, price, onSale) {
-        this.id = +Math.random().toString().slice(2);
         this.title = title;
         this.qty = qty;
         this.price = price;
         this.onSale = onSale;
+        this.id = +Math.random().toString().slice(2);
     }
 }
 const cartArr = [
-    { id: 1, title: 'BasketBall', qty: 1, price: 69.99, onSale: false },
-    { id: 2, title: 'Golf Club', qty: 1, price: 139.99, onSale: true },
-    { id: 3, title: 'Carbon fins', qty: 1, price: 290.0, onSale: false },
+    new CartItem('BasketBall', 1, 69.99, false),
+    new CartItem('Golf Club', 1, 139.99, true),
+    new CartItem('Carbon fins', 1, 290.0, false),
 ];
 function addToCart(arr, item) {
     arr.push(item);
